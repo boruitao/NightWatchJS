@@ -2,7 +2,7 @@ package com.borui.cucumber;
 
 import cucumber.api.CucumberOptions;
 
-@CucumberOptions(features = "src/test/recourses",
+@CucumberOptions(features = "src/test/resources",
         glue = {"com.borui.cucumber"},
         monochrome = true,
         plugin = { "pretty"}
