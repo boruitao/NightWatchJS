@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03da1d1f-2954-4b46-9b44-98d719f9f86c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/borui/cucumber/StepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/borui/cucumber/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/borui/cucumber/CucumberRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/borui/cucumber/StepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/borui/cucumber/StepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/image_login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/image_login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/borui/cucumber/CucumberRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/borui/cucumber/CucumberRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/text_login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/text_login.feature" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -39,26 +38,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/text_login.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="24" selection-start-line="4" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/image_login.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="77" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
+            <state relative-caret-position="165">
+              <caret line="11" column="98" selection-start-line="11" selection-start-column="98" selection-end-line="11" selection-end-column="98" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/image_login.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/borui/cucumber/StepDefinitions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            <state relative-caret-position="255">
+              <caret line="131" column="53" selection-start-line="131" selection-start-column="53" selection-end-line="131" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,10 +84,12 @@
         <option value="$PROJECT_DIR$/src/test/java/CucumberRunner.java" />
         <option value="$PROJECT_DIR$/src/test/resources/login.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/test_login.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/com/borui/cucumber/StepDefinitions.java" />
         <option value="$APPLICATION_CONFIG_DIR$/idea.properties" />
         <option value="$PROJECT_DIR$/src/test/java/com/borui/cucumber/CucumberRunner.java" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/src/test/resources/text_login.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/image_login.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/com/borui/cucumber/StepDefinitions.java" />
       </list>
     </option>
   </component>
@@ -96,10 +100,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="73" />
     <option name="width" value="1280" />
-    <option name="height" value="716" />
+    <option name="height" value="669" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -107,8 +111,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,12 +165,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555360296871" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555457021678" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -188,21 +194,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber java.Feature: text_login">
-    <configuration name="Feature: test_login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/test_login.feature" />
-      <option name="GLUE" value="stepdefs" />
+  <component name="RunManager" selected="Cucumber java.Feature: image_login">
+    <configuration name="Feature: image_login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/image_login.feature" />
+      <option name="GLUE" value="com.borui.cucumber" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="NightWatchJS" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
-      <option name="SUGGESTED_NAME" value="Feature: test_login" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -253,7 +251,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cucumber java.Feature: test_login" />
+      <item itemvalue="Cucumber java.Feature: image_login" />
       <item itemvalue="Cucumber java.Feature: text_login" />
       <item itemvalue="Cucumber java.Scenario: successful credential login after specifying the username and password" />
     </list>
@@ -261,7 +259,6 @@
       <list>
         <item itemvalue="Cucumber java.Feature: text_login" />
         <item itemvalue="Cucumber java.Scenario: successful credential login after specifying the username and password" />
-        <item itemvalue="Cucumber java.Feature: test_login" />
       </list>
     </recent_temporary>
   </component>
@@ -275,26 +272,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555352416873</updated>
-      <workItem from="1555352421652" duration="6804000" />
+      <workItem from="1555352421652" duration="7701000" />
+      <workItem from="1555453697018" duration="2885000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Feature__text_login - 2019.04.15 at 16h 01m 43s.xml">
-      <configuration name="Feature: text_login" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Feature__text_login - 2019.04.15 at 16h 03m 53s.xml">
-      <configuration name="Feature: text_login" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Feature__text_login - 2019.04.15 at 16h 05m 45s.xml">
-      <configuration name="Feature: text_login" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Feature__text_login - 2019.04.15 at 16h 12m 21s.xml">
-      <configuration name="Feature: text_login" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Scenario__successful_credential_login_after_specifying_the_username_and_password - 2019.04.15 at 16h 12m 35s.xml">
-      <configuration name="Scenario: successful credential login after specifying the username and password" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
     <history-entry file="Feature__text_login - 2019.04.15 at 16h 17m 22s.xml">
       <configuration name="Feature: text_login" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
@@ -310,43 +293,58 @@
     <history-entry file="Feature__text_login - 2019.04.15 at 16h 30m 40s.xml">
       <configuration name="Feature: text_login" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
+    <history-entry file="Feature__text_login - 2019.04.16 at 18h 52m 23s.xml">
+      <configuration name="Feature: text_login" configurationId="CucumberJavaRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Feature__text_login - 2019.04.16 at 18h 57m 36s.xml">
+      <configuration name="Feature: text_login" configurationId="CucumberJavaRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Feature__image_login - 2019.04.16 at 19h 07m 55s.xml">
+      <configuration name="Feature: image_login" configurationId="CucumberJavaRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Feature__image_login - 2019.04.16 at 19h 12m 39s.xml">
+      <configuration name="Feature: image_login" configurationId="CucumberJavaRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Feature__image_login - 2019.04.16 at 19h 17m 50s.xml">
+      <configuration name="Feature: image_login" configurationId="CucumberJavaRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6804000" />
+    <option name="totallyTimeSpent" value="10586000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1280" height="720" extended-state="6" />
+    <frame x="0" y="73" width="1280" height="669" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.32961783" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32961783" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32928944" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35875216" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32928944" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,6 +358,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -367,10 +366,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/borui/cucumber/StepDefinitions.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/image_login.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="225">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/text_login.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="98" selection-start-line="11" selection-start-column="98" selection-end-line="11" selection-end-column="98" />
         </state>
       </provider>
     </entry>
@@ -381,17 +387,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/text_login.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/borui/cucumber/StepDefinitions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="24" selection-start-line="4" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/image_login.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="77" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
+        <state relative-caret-position="255">
+          <caret line="131" column="53" selection-start-line="131" selection-start-column="53" selection-end-line="131" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -471,6 +473,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: cglib:cglib-nodep:3.2.4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

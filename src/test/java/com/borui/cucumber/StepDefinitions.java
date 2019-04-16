@@ -7,17 +7,28 @@ import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.MalformedURLException;
+import java.io.File;
+import java.io.IOException;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import javax.imageio.ImageIO;
+import java.util.Arrays;
 
 public class StepDefinitions {
 
     // Variables
     private WebDriver driver;
     private final String PATH_TO_CHROME_DRIVER = "/Users/toukashiwaakira/workspaces/driver/chromedriver";
+    private final String PATH_TO_IMG_DIR = "/Users/toukashiwaakira/workspaces/NightWatchJS/screenshot";
     private final String LOGIN_URL = "http://testing-ground.scraping.pro/login";
 
     private final String VALID_USERNAME = "admin";
@@ -30,6 +41,11 @@ public class StepDefinitions {
     public void givenUserOnLoginPage() throws Throwable {
         setupSeleniumWebDrivers();
         goTo(LOGIN_URL);
+    }
+
+    @And("^I have a screenshot of the successful login page$")
+    public void takeScreenShotOfSuccessfulLoginPage() throws Throwable {
+        Assert.assertTrue(new File(PATH_TO_IMG_DIR + "/success.png").exists());
     }
 
     @When("^I enter the username and password$")
@@ -88,12 +104,77 @@ public class StepDefinitions {
         Assert.assertTrue(driver.findElements(By.xpath("//h3[@class='error']")).size() > 0);
     }
 
+    @Then("^I should be redirected to a page that is identical to the screenshot I have$")
+    public void redirectedToWelcomePageAndTakeScreenShot() throws Throwable {
+        System.out.println("Waiting for the GO BACK button to be displaced...");
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='login']")));
+        System.out.print("GO BACK button appears!\n");
+
+        takeScreenshot("/test1.png");
+        BufferedImage originalScreenshot = ImageIO.read(new File(PATH_TO_IMG_DIR + "/success.png"));
+        BufferedImage currentScreenshot = ImageIO.read(new File(PATH_TO_IMG_DIR + "/test1.png"));
+        Assert.assertTrue(compareImages(originalScreenshot, currentScreenshot));
+        deleteFile(new File(PATH_TO_IMG_DIR + "/test1.png"));
+    }
+
+    @Then("^I should be redirected to a page that is not identical to the screenshot I have$")
+    public void redirectedToErrorPageAndTakeScreenShot() throws Throwable {
+        System.out.println("Waiting for the GO BACK button to be displaced...");
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='login']")));
+        System.out.print("GO BACK button appears!\n");
+
+        takeScreenshot("/test2.png");
+        BufferedImage originalScreenshot = ImageIO.read(new File(PATH_TO_IMG_DIR + "/success.png"));
+        BufferedImage currentScreenshot = ImageIO.read(new File(PATH_TO_IMG_DIR + "/test2.png"));
+        Assert.assertFalse(compareImages(originalScreenshot, currentScreenshot));
+        deleteFile(new File(PATH_TO_IMG_DIR + "/test2.png"));
+    }
+
+    private boolean compareImages(BufferedImage originalScreenshot, BufferedImage currentScreenshot) throws IOException{
+        ByteArrayOutputStream original_byteOutput = new ByteArrayOutputStream();
+        ByteArrayOutputStream current_byteOutput = new ByteArrayOutputStream();
+        ImageIO.write(originalScreenshot, "png", original_byteOutput);
+        original_byteOutput.flush();
+        byte[] imageInByteOriginal = original_byteOutput.toByteArray();
+        original_byteOutput.close();
+        ImageIO.write(currentScreenshot, "png", current_byteOutput);
+        current_byteOutput.flush();
+        byte[] imageInByteCurrent = current_byteOutput.toByteArray();
+        current_byteOutput.close();
+        return Arrays.equals(imageInByteOriginal, imageInByteCurrent);
+    }
+
+    private void takeScreenshot(String name) {
+        System.out.println("Preparing to take screenshot...");
+        driver.manage().window().maximize();
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("scroll(0, 250)");
+        System.out.println("Taking to take screenshot...");
+        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(src, new File(PATH_TO_IMG_DIR + name));
+            System.out.println("Screenshot taken and copied");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     private void setupSeleniumWebDrivers() throws MalformedURLException {
         if (driver == null) {
             System.out.println("Setting up ChromeDriver... ");
             System.setProperty("webdriver.chrome.driver", PATH_TO_CHROME_DRIVER);
             driver = new ChromeDriver();
             System.out.print("Done!\n");
+        }
+    }
+
+    private void deleteFile(File file){
+        if(file.delete()) {
+            System.out.println("File deleted successfully");
+        } else {
+            System.out.println("Failed to delete the file");
         }
     }
 
