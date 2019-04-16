@@ -1,41 +1,35 @@
 package com.borui.cucumber;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import cucumber.api.java.en.When;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.WebElement;
+import org.junit.Assert;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.net.MalformedURLException;
-import java.io.File;
-import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
-import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.Arrays;
 
 public class StepDefinitions {
 
-    // Variables
-    private WebDriver driver;
     private final String PATH_TO_CHROME_DRIVER = "/Users/toukashiwaakira/workspaces/driver/chromedriver";
     private final String PATH_TO_IMG_DIR = "/Users/toukashiwaakira/workspaces/NightWatchJS/screenshot";
     private final String LOGIN_URL = "http://testing-ground.scraping.pro/login";
-
     private final String VALID_USERNAME = "admin";
     private final String VALID_PW = "12345";
-
     private final String INVALID_USERNAME = "borui";
     private final String INVALID_PW = "666666";
+    // Variables
+    private WebDriver driver;
 
     @Given("^I am on the \"login\" page with the username and password unspecified$")
     public void givenUserOnLoginPage() throws Throwable {
@@ -132,7 +126,7 @@ public class StepDefinitions {
         deleteFile(new File(PATH_TO_IMG_DIR + "/test2.png"));
     }
 
-    private boolean compareImages(BufferedImage originalScreenshot, BufferedImage currentScreenshot) throws IOException{
+    private boolean compareImages(BufferedImage originalScreenshot, BufferedImage currentScreenshot) throws IOException {
         ByteArrayOutputStream original_byteOutput = new ByteArrayOutputStream();
         ByteArrayOutputStream current_byteOutput = new ByteArrayOutputStream();
         ImageIO.write(originalScreenshot, "png", original_byteOutput);
@@ -170,8 +164,8 @@ public class StepDefinitions {
         }
     }
 
-    private void deleteFile(File file){
-        if(file.delete()) {
+    private void deleteFile(File file) {
+        if (file.delete()) {
             System.out.println("File deleted successfully");
         } else {
             System.out.println("Failed to delete the file");
