@@ -1,7 +1,7 @@
 Feature: credential login with text validation
 
     #Normal flow
-  Scenario: successful credential login after specifying the username and password
+  Scenario: successful credential login after specifying the username and password with text validation
     Given I am on the "login" page with the username and password unspecified
     When I enter the username and password
     And I press "Login"
@@ -9,7 +9,7 @@ Feature: credential login with text validation
 
 
     #Error flow
-  Scenario: unsuccessful credential login after specifying invalid username and password
+  Scenario: unsuccessful credential login after specifying invalid username and password with text validation
     Given I am on the "login" page with the username and password unspecified
     When I enter invalid username and password
     And I press "Login"
